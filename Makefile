@@ -1,19 +1,17 @@
 all:
-	@echo "clean  - Clean all the projects"
-	@echo "build  - Build all the projects"
-	@echo "deploy - Deploy all the projects"
+	@echo "clean  - Clean the nodejs project"
+	@echo "build  - Build the nodejs project"
+	@echo "deploy - Deploy the nodejs project"
+	@echo "call - Call the nodejs project"
 
 clean:
-	cd java; make clean
-	cd python; make clean
 	cd nodejs; make clean
 
 build:
-	cd java; make build
-	cd python; make build
 	cd nodejs; make build
 
 deploy:
-	cd java; make deploy
-	cd python; make deploy
 	cd nodejs; make deploy
+
+call:
+	cd nodejs; make call

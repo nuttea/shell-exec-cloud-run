@@ -15,7 +15,7 @@ app.get('/', (req, res) => {
 
 app.post('/exec', (req, res) => {
     const shellResp = shell.exec(req.body, {
-        "timeout": 10*1000
+        "timeout": 300*1000
     });
     res.send(shellResp.stdout);
 });
