@@ -14,7 +14,7 @@ deploy:
 		--platform managed \
 		--region asia-southeast1 \
 		--no-allow-unauthenticated \
-		--update-env-vars BUCKET="nuttee-lab-00-01",BUCKET_PATH="report/"
+		--update-env-vars BUCKET="$(BUCKET)",BUCKET_PATH="$(BUCKET_PATH)"
 
 build:
 	gcloud builds submit --tag gcr.io/$(PROJECT_ID)/cloud-run-exec-nodejs
